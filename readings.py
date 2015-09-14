@@ -106,7 +106,7 @@ if dryrun:
     print "Variance: " + str(highestTemp - lowestTemp) + '\n'
     print '************************\n'
 else:
-    url = 'https://rpiminiweather.azurewebsites.net/api/readings'
+    url = '<YOUR URL>'
 
     postdata = {
         'Altitude': altitude,
