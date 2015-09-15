@@ -25,10 +25,10 @@ luxrdr = luxreader.TSL2561()
 am2302Pin = 22
 
 # Oauth JSON File
-GDOCS_OAUTH_JSON       = '<YOUR JSON AUTH FILE>'
+GDOCS_OAUTH_JSON       = 'Mini Weather Station-f68343d4a35a.json'
 
 # Google Docs spreadsheet name.
-GDOCS_SPREADSHEET_NAME = '<YOUR GOOGLE SPREADSHEET NAME>'
+GDOCS_SPREADSHEET_NAME = 'Sensors'
 
 # How long to wait (in seconds) between measurements.
 FREQUENCY_SECONDS      = 30
@@ -60,26 +60,26 @@ while True:
 
 	# Attempt to get sensor reading.
 
-		humidity, temperature1 = Adafruit_DHT.read_retry(Adafruit_DHT.AM2302 , am2302Pin)
-		sensor = BMP085.BMP085(mode=BMP085.BMP085_ULTRAHIGHRES)
-		pressure = sensor.read_pressure()
-		altitude = sensor.read_altitude()
-		slpressure = sensor.read_sealevel_pressure()
-		temperature2 = sensor.read_temperature()
-		temperature3 = ds18b20_read_temp()
-		lux = luxrdr.readLux()
-		avgTemp = ((temperature1 + temperature2 + temperature3) / 3)
+    	humidity, temperature1 = Adafruit_DHT.read_retry(Adafruit_DHT.AM2302 , am2302Pin)
+	sensor = BMP085.BMP085(mode=BMP085.BMP085_ULTRAHIGHRES)
+	pressure = sensor.read_pressure()
+	altitude = sensor.read_altitude()
+	slpressure = sensor.read_sealevel_pressure()
+	temperature2 = sensor.read_temperature()
+	temperature3 = ds18b20_read_temp()
+	lux = luxrdr.readLux()
+	avgTemp = ((temperature1 + temperature2 + temperature3) / 3)
 
-		print 'Temp Sensor 1 = {0:0.1f} *C'.format(temperature1)
-		print 'Humidity={0:0.1f}%'.format(humidity)
-		print 'BMP180:'
-		print 'Temp Sensor 2 = {0:0.2f} *C'.format(temperature2)
-		print 'Pressure = {0:0.2f} Pa'.format(pressure)
-		print 'Altitude = {0:0.2f} m'.format(altitude)
-		print 'Sealevel Pressure = {0:0.2f} Pa'.format(slpressure)
-		print 'Temp Sensor 3 = {0:0.3f} *C'.format(temperature3)
-		print 'Lux: ' + str(lux)
-		print "Average: " + str(avgTemp)
+	print 'Temp Sensor 1 = {0:0.1f} *C'.format(temperature1)
+	print 'Humidity={0:0.1f}%'.format(humidity)
+	print 'BMP180:'
+	print 'Temp Sensor 2 = {0:0.2f} *C'.format(temperature2)
+	print 'Pressure = {0:0.2f} Pa'.format(pressure)
+	print 'Altitude = {0:0.2f} m'.format(altitude)
+	print 'Sealevel Pressure = {0:0.2f} Pa'.format(slpressure)
+	print 'Temp Sensor 3 = {0:0.3f} *C'.format(temperature3)
+	print 'Lux: ' + str(lux)
+	print "Average: " + str(avgTemp)
 
 	# Append the data in the spreadsheet, including a timestamp
 	try:
