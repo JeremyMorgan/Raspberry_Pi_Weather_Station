@@ -1,25 +1,22 @@
-# Raspberry Pi Mini Weather Station
+# Angular Kickstart
 
-<img src="http://i.imgur.com/0fuAdsS.jpg" width="600px">
+Angular Boiler Plate Application
 
-Raspberry Pi Weather Station
+**[ View the example page](http://jeremymorgan.github.io/Angular-Kickstart/#/)**
 
-Measures:
+I created this based on recent work with Angular JS, and I really didn't like the way the Angular Seed project is set up. I decided to create my own boilerplate for creating new Angular applications using a structure and patterns I think work very well.
 
-* Temperature
-* Humidity
-* Atmospheric Pressure
-* Lux
+I decided to open source it and get some feedback from others to try and improve it. 
+
+![Layout](http://i.imgur.com/wy5l7c5.png)
+
+This uses a directory layout I originally found [in this article](https://scotch.io/tutorials/angularjs-best-practices-directory-structure). I have found it to be really nice for setting up larger applications. I also use some different patterns I've found to be helpful as well. 
+
+This uses:
 
 
-##Parts you'll need:
+- **[Angular UI-Router](https://github.com/angular-ui/ui-router)**
+- **[Bootstrap](http://getbootstrap.com/)**
+- **[Flatly Theme](https://bootswatch.com/flatly/)**
 
-* <a href="http://www.adafruit.com/products/393">AM2302</a> Temperature / Humidity Sensor
-* <a href="http://www.adafruit.com/products/1603">BMP180</a> Temperature / Barometric Pressure Sensor
-* <a href="http://www.adafruit.com/products/374">DS18B20</a> Waterproof Temperature Sensor
-* <a href="http://www.adafruit.com/products/439">TSL2561</a> Digital Lumosity Sensor
-
-Instructions for installation coming soon. 
-
-Uses other open source libraries that will be linked to. 
-
+**[See a live version Here based on this repo. ](http://jeremymorgan.github.io/Angular-Kickstart/#/)**

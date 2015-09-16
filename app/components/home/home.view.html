@@ -1,0 +1,45 @@
+<div class="jumbotron">
+    <h2>Current Temperature:</h2>
+    <h1>{{ctrl.TemperatureNow | number:2}} &deg;<span style="font-size:20px">F</span></h1>
+   <canvas id="line" class="chart chart-line" chart-data="data"
+  chart-labels="labels" chart-legend="true" chart-series="series"
+  chart-click="onClick" >
+</canvas> 
+</div>
+
+
+<div class="row clearfix">
+    <div class="col-md-4 column">
+        <h2>Temp Sensor 1</h2>
+        <h1>{{ctrl.TempSensor1 | number:2}}<span style="font-size:20px">F</span></h1>
+    </div>
+    <div class="col-md-4 column">
+        <h2>Temp Sensor 2</h2>
+        <h1>{{ctrl.TempSensor2 | number:2}}<span style="font-size:20px">F</span></h1>
+    </div>
+    <div class="col-md-4 column">
+        <h2>Temp Sensor 3</h2>
+        <h1>{{ctrl.TempSensor1 | number:2 }}<span style="font-size:20px">F</span></h1>
+    </div>
+</div>
+
+
+
+
+<div class="row clearfix">
+    <div class="col-md-4 column">
+        <h2>Humidity</h2>
+        <h1>{{ctrl.Humidity}}<span style="font-size:20px">%</span></h1>
+    </div>
+    <div class="col-md-4 column">
+        <h2>Barometric Pressure</h2>
+        <h1>
+        <span class="glyphicon glyphicon-arrow-up" aria-hidden="true" ng-show="ctrl.PressureUP"></span>
+        <span class="glyphicon glyphicon-arrow-down" aria-hidden="true" ng-hide="ctrl.PressureUP"></span>
+          {{ctrl.Pressure}}<span style="font-size:20px"> Pa</span></h1>
+    </div>
+    <div class="col-md-4 column">
+        <h2>Illuminance</h2>
+        <h1>{{ctrl.Lux}} Lux</h1>
+    </div>
+</div>

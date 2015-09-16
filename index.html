@@ -1,1 +1,43 @@
-"Index" 
+<!DOCTYPE html ng-app="angularstrapApp" >
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="angularstrapApp">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="stylesheet" href="assets/css/bootstrapFlatly/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+</head>
+<title>Mini Weather Station</title>
+<body>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                    <a class="navbar-brand" href="#/">Mini Weather Station</a>
+                </div>              
+            </nav>
+        </div>
+    </div>
+    <!-- start dynamic content -->
+    <div ui-view=""></div>
+    <!-- end dynamic content -->
+</div>
+</body>
+<!-- load jQuery from CDN --> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- load BootStrap from CDN --> 
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="/assets/js/chart.js"></script>
+<script src="/assets/libs/angular/angular.js"></script>
+<script src="/assets/libs/angular/angular-ui-router.js"></script>
+<script src="/bower_components/angular-chart.js/dist/angular-chart.js"></script>
+<script src="/app/app.modules.js"></script>
+<script src="/app/app.states.js"></script>
+<script src="/app/components/home/home.controller.js"></script>
+<script src="/app/components/home/home.services.js"></script>
+<script src="/app/components/about/about.controller.js"></script>
+<script src="/app/components/about/about.services.js"></script>
+
+
+</html>
