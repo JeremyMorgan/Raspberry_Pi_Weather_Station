@@ -33,7 +33,7 @@
             function getLastDay(){
                 var deferred = $q.defer();
 
-                $http.get("http://weathercenter.azurewebsites.net/api/Reading/60").
+                $http.get("http://weathercenter.azurewebsites.net/api/Reading/65").
                 then(function(response) {
                     deferred.resolve(response.data);
                 }, function(error) {

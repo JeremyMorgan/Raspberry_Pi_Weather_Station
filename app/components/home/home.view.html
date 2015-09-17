@@ -1,6 +1,7 @@
 <div class="jumbotron">
     <h2>Current Temperature:</h2>
     <h1>{{ctrl.TemperatureNow | number:2}} &deg;<span style="font-size:20px">F</span></h1>
+    <h3>Last hour (5 minute intervals)</h3>
    <canvas id="line" class="chart chart-line" chart-data="data"
   chart-labels="labels" chart-legend="true" chart-series="series"
   chart-click="onClick" >
