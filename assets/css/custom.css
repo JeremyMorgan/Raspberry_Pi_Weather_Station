@@ -1,0 +1,9 @@
+.charts {
+
+	background-color: #ECF0F1;
+}
+#chart_div1, #chart_div2 , #chart_div3 {
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+}

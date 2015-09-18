@@ -10,6 +10,23 @@
 
             var vm = this;
 
+            // guage settings
+            vm.options = {
+                width: 500, height: 200,
+                min: 0,
+                max: 120,
+                greenFrom: 0,
+                greenTo: 32,
+                yellowFrom: 32,
+                yellowTo: 80,
+                redFrom: 80,
+                redTo: 120,
+                greenColor: '#B8EEFC',
+                yellowColor: '#FCCF80',
+                redColor: '#F25337',
+                minorTicks: 4
+            };
+
             //services
             vm.angularstrapService = asyncService;
             vm.Snapshot = [];
@@ -21,25 +38,29 @@
             vm.HeroHeader = asyncService.retrievedData.HeroHeader;
             vm.HeroText = asyncService.retrievedData.HeroText;
 
-        function toJSDate (dateTime) {
+            function drawGuages(){
+                 vm.guage1data = google.visualization.arrayToDataTable([
+                      ['Label', 'Value'],
+                      ['', vm.TempSensor1],
+                    ]);
+                 vm.guage2data = google.visualization.arrayToDataTable([
+                      ['Label', 'Value'],
+                      ['', vm.TempSensor2],
+                    ]);
+                 vm.guage3data = google.visualization.arrayToDataTable([
+                      ['Label', 'Value'],
+                      ['', vm.TempSensor3],
+                    ]);
 
-            var returnDate = moment(dateTime).format('h:mm:ss a');
-            //moment().format('MMMM Do YYYY, h:mm:ss a'); // September 16th 2015, 8:36:46 pm
+                    var chart1 = new google.visualization.Gauge(document.getElementById('chart_div1'));
+                    var chart2 = new google.visualization.Gauge(document.getElementById('chart_div2'));
+                    var chart3 = new google.visualization.Gauge(document.getElementById('chart_div3'));
 
-            /*
-            console.log("Value: " + JSON.stringify(dateTime));
+                    chart1.draw(vm.guage1data, vm.options);
+                    chart2.draw(vm.guage2data, vm.options);
+                    chart3.draw(vm.guage3data, vm.options);
+            }
 
-            var dateTime = dateTime.split(" ");//dateTime[0] = date, dateTime[1] = time
-
-            var date = dateTime[0].split("-");
-            var time = dateTime[1].split(":");
-
-            //(year, month, day, hours, minutes, seconds, milliseconds)
-            return new Date(date[0], date[1], date[2], time[0], time[1], time[2], 0);
-            */
-            return returnDate;
-
-        }
             asyncService.getLatestSnapshot()
             .then(function (resultset) {
                     vm.TemperatureNow = ((resultset[0].TempSensorAvg * 9) / 5) + 32;
@@ -50,6 +71,7 @@
                     vm.Pressure = resultset[0].Pressure;
                     vm.Lux = resultset[0].Lux;
 
+                    drawGuages();
 
                     if (resultset[0].Pressure > 101325){
                         console.log(vm.Pressure + "its up");
@@ -62,35 +84,25 @@
                 }, function(error) {
                     deferred.reject(error);
                     console.log("requestService Error: " + JSON.stringify(error));
-                });
+                });              
                 
                 asyncService.getLastDay()
                 .then(function (resultset) {
                     //vm.TemperatureNow = ((resultset[0].TempSensorAvg * 9) / 5) + 32;
                     var tempary = [];
                     var humary = [];
-                    var timeary = [];
-                    var ctr = 0;
 
                     angular.forEach(resultset, function(value, key) {
                       //console.log("Key is " + key + ' Value is: ' + value);
-                       // ftemp =  ((resultset[0].TempSensor3 * 9) / 5) + 32;
-                        if (ctr % 5 == 0){
-                            tempary.push(((value.TempSensorAvg * 9) / 5) + 32);
-                            humary.push(value.Humidity);
-
-
-                            timeary.push(ctr);
-                        }
-                        ctr++;
-
+                       tempary.push(value.TempSensorAvg);
+                       humary.push(value.Humidity);
+                    
                     }, resultset);       
 
                     var finalary = [];
                     finalary.push(tempary);
                     finalary.push(humary);
-                    //$scope.labels = ["1", "2", "3", "4", "5", "6", "7"];
-                    $scope.labels = timeary;
+                    $scope.labels = ["1", "2", "3", "4", "5", "6", "7"];
                     $scope.series = ['Temperature', 'Humidity'];
                     console.log(finalary)
                     $scope.data = finalary;
