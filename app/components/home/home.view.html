@@ -25,21 +25,19 @@
 </div>
 
 
-
-
-<div class="row clearfix">
-    <div class="col-md-4 column">
+<div class="row clearfix" style="text-align: center">
+    <div class="col-md-4">
         <h2>Humidity</h2>
         <h1>{{ctrl.Humidity}}<span style="font-size:20px">%</span></h1>
     </div>
-    <div class="col-md-4 column">
+    <div class="col-md-4">
         <h2>Barometric Pressure</h2>
         <h1>
         <span class="glyphicon glyphicon-arrow-up" aria-hidden="true" ng-show="ctrl.PressureUP"></span>
         <span class="glyphicon glyphicon-arrow-down" aria-hidden="true" ng-hide="ctrl.PressureUP"></span>
           {{ctrl.Pressure}}<span style="font-size:20px"> Pa</span></h1>
     </div>
-    <div class="col-md-4 column">
+    <div class="col-md-4">
         <h2>Illuminance</h2>
         <h1>{{ctrl.Lux}} Lux</h1>
     </div>
