@@ -23,3 +23,5 @@ Instructions for installation coming soon.
 
 Uses other open source libraries that will be linked to. 
 
+[Check out the dashboard!](http://jeremymorgan.github.io/Raspberry_Pi_Weather_Station/#/)
+
