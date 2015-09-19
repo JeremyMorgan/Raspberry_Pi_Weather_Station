@@ -2,8 +2,31 @@
     <div class="col-md-2 column">
     </div>
     <div class="col-md-8 column">
-        <h2>{{ctrl.pageHeading}}</h2>
-        <p>{{ctrl.pageText}} </p>
+        <h1 class="centered">About This Project</h1>
+
+        <img src="/Raspberry_Pi_Weather_Station/assets/img/raspberry-pi-weather-station.jpg" alt="Raspberry Pi Weather Station" class="centered-img">
+        <br /><br />
+        <iframe src="https://ghbtns.com/github-btn.html?user=JeremyMorgan&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="220px" height="30px"></iframe>
+        <br /><br />
+        <p>This is a small weather station that I've created for fun. It uses a set of sensors read by a Raspberry Pi 2 and sits on my desk sampling data every minute, 24 hours a day. </p>
+
+        <p>It consists of: </p>
+        <ul>
+            <li>Raspberry Pi 2 (<a href="http://www.newark.com/raspberry-pi-accessories?ICID=HP-R1-B1-Rasp-Pi" target="_blank">Get One Here</a>)</li>
+            <li><a href="http://www.adafruit.com/products/393">AM2302</a> Temperature / Humidity Sensor</li>
+            <li><a href="http://www.adafruit.com/products/1603">BMP180</a> Temperature / Barometric Pressure Sensor</li>
+            <li><a href="http://www.adafruit.com/products/374">DS18B20</a> Waterproof Temperature Sensor</li>
+            <li><a href="http://www.adafruit.com/products/439">TSL2561</a> Digital Lumosity Sensor</li>
+        </ul>
+        <br />
+        <p>The sampling is done by a combination of C++ applications and Python Scripts tied together in a single script <a href="https://github.com/JeremyMorgan/Raspberry_Pi_Weather_Station">which is available on GitHub.</a>
+        It is then sent a .Net WebAPI on Azure (Source soon to be released) and then parsed out on this page. </p>
+        <br />
+        <p>I will be writing an full tutorial soon on <a href="https://www.jeremymorgan.com">My Programming Blog</a> detailing the exact steps you'll need to build this project at home.</p>
+        <br />
+        <p>If you would like to follow this project, <a href="https://github.com/JeremyMorgan">Follow me on GitHub</a> or <a href="https://twitter.com/JeremyCMorgan">Twitter</a> as I will be making updates and changes in the future</p>
+        <br />
+
     </div>
     <div class="col-md-2 column">
     </div>

@@ -11,30 +11,15 @@
          * @param {object} [asyncService] our async service for http calls
          * @param {string} [APIHOST] constant for pointing to REST server
          *
-         *!/
+         /*
+
+          */
           function AboutController($scope, $http, $window, $q, asyncService, APIHOST) {
 
             var vm = this;
 
-            //services
-            vm.angularstrapService = asyncService;
-
-            //properties
-            vm.APIHost = APIHOST;
-
-            // get our hero text
-            asyncService.getHeroText(APIHOST);
-
-            vm.pageHeading = asyncService.retrievedData.pageHeader;
-            
-            vm.pageText = asyncService.retrievedData.pageText;
-
-            function reloadPage() {
-                $window.location.reload();
-
-            }
-
             return vm;
-        }*/
+        }
+
     ]);
 })();

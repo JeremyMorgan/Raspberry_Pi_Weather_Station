@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Local Serve" />
+  <component name="PublishConfigData" serverName="Local Serve">
+    <serverData>
+      <paths name="Local Serve">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/Raspberry_Pi_Weather_Station/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
 </project>

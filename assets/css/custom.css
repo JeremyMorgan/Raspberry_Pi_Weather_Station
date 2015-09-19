@@ -11,3 +11,13 @@
 row {
 	margin-top: 40px;
 }
+.rightimage {
+    float: right;
+}
+
+.centered-img {
+    margin: 0 auto;
+}
+.centered {
+    text-align: center
+}
