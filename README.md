@@ -11,6 +11,7 @@ Measures:
 * Atmospheric Pressure
 * Lux
 
+[Check out the dashboard!](http://jeremymorgan.github.io/Raspberry_Pi_Weather_Station/#/)
 
 ##Parts you'll need:
 
@@ -19,9 +20,11 @@ Measures:
 * <a href="http://www.adafruit.com/products/374">DS18B20</a> Waterproof Temperature Sensor
 * <a href="http://www.adafruit.com/products/439">TSL2561</a> Digital Lumosity Sensor
 
-Instructions for installation coming soon. 
+##Installation Instructions:
 
-Uses other open source libraries that will be linked to. 
+These instructions have been tested with the latest version of Raspian, however they should run in most distributions of Linux fairly easily. 
 
-[Check out the dashboard!](http://jeremymorgan.github.io/Raspberry_Pi_Weather_Station/#/)
+Wire up the sensors as shown here: 
+<img src="http://i.imgur.com/5uoNdbp.png" width="650px" height="538">
+
 
