@@ -2,8 +2,6 @@
 
 <img src="http://i.imgur.com/0fuAdsS.jpg" width="600px">
 
-<iframe src="https://ghbtns.com/github-btn.html?user=JeremyMorgan&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="220px" height="30px"></iframe>
-
 ##Raspberry Pi Weather Station
 
 Measures:
