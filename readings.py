@@ -84,6 +84,12 @@ if useTSL2561:
     #lux = luxrdr.readLux(1)     # Low Gain
     #lux = luxrdr.readLux(16)    # High Gain
 
+    #lux meter sometimes registers 0. Try re reading 5 times if it does
+    counter = 0
+    if (lux == 0 & counter < 5):
+        lux = luxrdr.readLux()
+        counter+=1
+
     if dryrun:
         print 'TSL2561:'
         print 'Lux: ' + str(lux) + '\n'
