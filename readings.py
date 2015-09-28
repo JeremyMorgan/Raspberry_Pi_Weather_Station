@@ -86,7 +86,7 @@ if useTSL2561:
 
     #lux meter sometimes registers 0. Try re reading 5 times if it does
     counter = 0
-    if (lux == 0 & counter < 5):
+    if (lux == 0 & counter < 10):
         lux = luxrdr.readLux()
         counter+=1
 
