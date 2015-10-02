@@ -94,8 +94,8 @@
 
                     angular.forEach(resultset, function(value, key) {
                       //console.log("Key is " + key + ' Value is: ' + value);
-                      console.log("Temp is " + value.TempSensorAvg);
-                       tempary.push(value.TempSensorAvg);
+          
+                       tempary.push(((value.TempSensorAvg * 9) / 5) + 32);
                        humary.push(value.Humidity);
                     
                     }, resultset);       
