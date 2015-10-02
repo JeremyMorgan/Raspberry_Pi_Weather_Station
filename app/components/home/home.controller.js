@@ -80,7 +80,7 @@
                         console.log(vm.Pressure + "its down");
                         vm.PressureUP = false;
                     }
-                    console.log(JSON.stringify(resultset));                    
+                    //console.log(JSON.stringify(resultset));                    
                 }, function(error) {
                     deferred.reject(error);
                     console.log("requestService Error: " + JSON.stringify(error));
@@ -105,15 +105,15 @@
                     finalary.push(humary);
                     $scope.labels = ["1", "2", "3", "4", "5", "6", "7"];
                     $scope.series = ['Temperature', 'Humidity'];
-                    console.log(finalary)
+                    //console.log(finalary)
                     $scope.data = finalary;
 
                   $scope.onClick = function (points, evt) {
-                    console.log(points, evt);
+                    //console.log(points, evt);
                   };
 
                    
-                    console.log(JSON.stringify(resultset));   
+                    //console.log(JSON.stringify(resultset));   
 
                 }, function(error) {
                     deferred.reject(error);
