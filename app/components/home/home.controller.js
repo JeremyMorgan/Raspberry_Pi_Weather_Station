@@ -74,10 +74,8 @@
                     drawGuages();
 
                     if (resultset[0].Pressure > 101325){
-                        console.log(vm.Pressure + "its up");
                         vm.PressureUP = true;
                     }else {
-                        console.log(vm.Pressure + "its down");
                         vm.PressureUP = false;
                     }
                     //console.log(JSON.stringify(resultset));                    
@@ -119,8 +117,7 @@
                     deferred.reject(error);
                     console.log("requestService Error: " + JSON.stringify(error));
                 });
-
-                
+               
 
             // subsections
             vm.col0heading = "Subsections";
