@@ -84,12 +84,7 @@ if useTSL2561:
     #lux = luxrdr.readLux(1)     # Low Gain
     #lux = luxrdr.readLux(16)    # High Gain
 
-    #lux meter sometimes registers 0. Try re reading if it does, 7 seems to be sweet spot
-    counter = 0
-    if (lux == 0 & counter < 7):
-        lux = luxrdr.readLux()
-        counter+=1
-    # we do give up at some point in case it is total darkness.
+    lux = luxrdr.readLux()
 
     if dryrun:
         print 'TSL2561:'
