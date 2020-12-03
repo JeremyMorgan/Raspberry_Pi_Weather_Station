@@ -2,7 +2,7 @@
 
 <img src="http://i.imgur.com/0fuAdsS.jpg" width="600px">
 
-##Raspberry Pi Weather Station
+## Raspberry Pi Weather Station
 
 Measures:
 
@@ -13,21 +13,21 @@ Measures:
 
 [Check out the dashboard!](http://jeremymorgan.github.io/Raspberry_Pi_Weather_Station/#/)
 
-##Parts you'll need:
+## Parts you'll need:
 
 * <a href="http://www.adafruit.com/products/393">AM2302</a> Temperature / Humidity Sensor
 * <a href="http://www.adafruit.com/products/1603">BMP180</a> Temperature / Barometric Pressure Sensor
 * <a href="http://www.adafruit.com/products/374">DS18B20</a> Waterproof Temperature Sensor
 * <a href="http://www.adafruit.com/products/439">TSL2561</a> Digital Lumosity Sensor
 
-##Installation Instructions:
+## Installation Instructions:
 
 These instructions have been tested with the latest version of Raspian, however they should run in most distributions of Linux fairly easily. 
 
 Wire up the sensors as shown here: 
 <img src="http://i.imgur.com/5uoNdbp.png" width="650px" height="538">
 
-###Setup the AM302
+### Set up the AM302
 
 Here we set up the <a href="http://www.adafruit.com/products/393">AM2302</a> Humidity Sensor. 
 
@@ -45,7 +45,7 @@ sudo apt-get install build-essential python-dev python-openssl
 sudo python setup.py install
 ```
 
-###Setup the DSB18B20
+### Set up the DSB18B20
 
 You will need to add One Wire Support:
 
@@ -101,7 +101,7 @@ Reboot the Pi:
 sudo reboot
 ```
 
-###Setup the TSL2561
+### Set up the TSL2561
 
 cd ~/sources 
 
@@ -112,7 +112,7 @@ wget https://raw.githubusercontent.com/seanbechhofer/raspberrypi/master/python/T
 
 (Thanks to Sean!)
 
-###Setup the BMP 180
+### Set up the BMP 180
 
 ```
 git clone https://github.com/adafruit/Adafruit_Python_BMP.git
@@ -120,7 +120,7 @@ cd Adafruit_Python_BMP
 sudo python setup.py install
 ```
 
-###Test the sensors
+### Test the sensors
 
 ```
 git clone https://github.com/JeremyMorgan/Raspberry_Pi_Weather_Station.git reader
